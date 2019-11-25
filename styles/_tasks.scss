@@ -1,0 +1,139 @@
+.no-tasks {
+  color: #c0c0c0;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 15%;
+  left: 25%;
+
+  & > * {
+    margin-bottom: 2rem;
+  }
+
+  & i {
+    font-size: 8rem;
+    padding-right: 0.65rem;
+  }
+}
+
+.tasks {
+  width: 72%;
+  margin: 1.2rem auto 0;
+  height: 5rem;
+  min-height: 30rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.taskBox {
+  margin-bottom: 1.5rem;
+  padding: 1rem 0 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d4d4d4;
+
+  &__label {
+    cursor: pointer;
+    width: 92%;
+    display: inline-flex;
+    align-items: center;
+    transition: opacity 0.2s;
+
+    &--custom-checkbox {
+      display: inline-block;
+      height: 2rem;
+      width: 2rem;
+      border: 2px solid #ff4e00;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+
+      &::after {
+        content: '';
+        display: block;
+        height: 1.2rem;
+        width: 1.2rem;
+        border-radius: 50%;
+        background: #e67e22;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+      }
+    }
+
+    &--checkbox {
+      display: none;
+
+      &:checked + .taskBox__label--custom-checkbox::after,
+      &:checked
+        + .taskBox__label--custom-checkbox
+        + .taskBox__label--title::after {
+        opacity: 1;
+      }
+
+      &:checked + .taskBox__label--custom-checkbox + .taskBox__label--title {
+        color: #888;
+      }
+
+      &:checked
+        + .taskBox__label--custom-checkbox
+        + .taskBox__label--title::after {
+        transform-origin: left;
+        transform: scaleX(1);
+      }
+
+      &:checked + .taskBox__label--custom-checkbox {
+        opacity: 0.6;
+      }
+    }
+
+    &--title {
+      color: #555;
+      font-size: 1.7rem;
+      font-weight: 700;
+      text-transform: capitalize;
+      margin-left: 5rem;
+      position: relative;
+      display: inline-block;
+      transition: transform 1s ease-in-out;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: -3%;
+        right: -5%;
+        top: 50%;
+        height: 2px;
+        background: #555;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: inherit;
+      }
+    }
+  }
+
+  &__deleteBtn {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+
+    & i {
+      color: #de7519;
+      font-size: 2.3rem;
+      transition: all 0.3s;
+
+      &:hover {
+        color: #bf6516;
+      }
+    }
+  }
+}
