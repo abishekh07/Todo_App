@@ -71,6 +71,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (max-width: 31.25em) {
+    position: relative;
+  }
 }
 
 .box {
@@ -100,6 +104,11 @@ body {
   top: -5%;
   left: 38.3%;
   box-shadow: $bs-small;
+
+  @media only screen and (max-width: 31.25em) {
+    top: 1%;
+    left: calc(100vw / 2.75);
+  }
 }
 
 .content {
@@ -109,6 +118,10 @@ body {
   flex-direction: column;
   overflow: scroll;
   scrollbar-width: none;
+
+  @media only screen and (max-width: 31.25em) {
+    margin: 10rem 1rem;
+  }
 
   &__date {
     font-size: 1.5rem;
@@ -127,6 +140,13 @@ body {
   align-items: flex-end;
   margin: 2rem 0 5rem;
 
+  @media only screen and (max-width: 31.25em) {
+    margin: 2rem 0;
+    position: absolute;
+    width: 100%;
+    bottom: 10%;
+  }
+
   &__input {
     width: 65%;
     color: #555;
@@ -137,6 +157,11 @@ body {
     border-bottom: 2px solid #ee4900;
     box-shadow: none;
     transition: all 0.4s;
+
+    @media only screen and (max-width: 31.25em) {
+      width: 60%;
+      margin: 0 2rem 0 7.7rem;
+    }
 
     &:focus {
       outline: none;

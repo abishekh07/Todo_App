@@ -21,6 +21,13 @@
   left: 25%;
 }
 
+@media only screen and (max-width: 31.25em) {
+  .no-tasks {
+    top: 38%;
+    left: 21%;
+  }
+}
+
 .no-tasks > * {
   margin-bottom: 2rem;
 }
@@ -43,6 +50,14 @@
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
+}
+
+@media only screen and (max-width: 31.25em) {
+  .tasks {
+    width: 75%;
+    margin: 3rem auto 0;
+    min-height: 45rem;
+  }
 }
 
 .taskBox {
@@ -260,6 +275,12 @@ body {
           align-items: center;
 }
 
+@media only screen and (max-width: 31.25em) {
+  .container {
+    position: relative;
+  }
+}
+
 .box {
   width: 60rem;
   background: #fff;
@@ -293,6 +314,13 @@ body {
           box-shadow: 0 1rem 3rem rgba(51, 51, 51, 0.08);
 }
 
+@media only screen and (max-width: 31.25em) {
+  .taskly {
+    top: 1%;
+    left: calc(100vw / 2.75);
+  }
+}
+
 .content {
   margin: 4rem 1rem 1rem;
   text-align: center;
@@ -305,6 +333,12 @@ body {
           flex-direction: column;
   overflow: scroll;
   scrollbar-width: none;
+}
+
+@media only screen and (max-width: 31.25em) {
+  .content {
+    margin: 10rem 1rem;
+  }
 }
 
 .content__date {
@@ -328,6 +362,15 @@ body {
   margin: 2rem 0 5rem;
 }
 
+@media only screen and (max-width: 31.25em) {
+  .form {
+    margin: 2rem 0;
+    position: absolute;
+    width: 100%;
+    bottom: 10%;
+  }
+}
+
 .form__input {
   width: 65%;
   color: #555;
@@ -340,6 +383,13 @@ body {
           box-shadow: none;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+}
+
+@media only screen and (max-width: 31.25em) {
+  .form__input {
+    width: 60%;
+    margin: 0 2rem 0 7.7rem;
+  }
 }
 
 .form__input:focus {
